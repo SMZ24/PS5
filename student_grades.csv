@@ -1,0 +1,12 @@
+StudentID,Name,Course,Grade,GPA
+10001,Alice Johnson,Data Structures,95.50,3.78
+10001,Alice Johnson,Algorithms,92.00,3.78
+10001,Alice Johnson,Operating Systems,85.00,3.78
+10002,Bob Smith,Data Structures,88.00,3.52
+10002,Bob Smith,Calculus,82.00,3.52
+10003,Carol White,Algorithms,92.50,3.70
+10003,Carol White,Database Systems,87.50,3.70
+10004,David Brown,Computer Networks,87.00,3.48
+10004,David Brown,Web Development,90.00,3.48
+10005,Emily Davis,Data Structures,94.00,3.76
+10005,Emily Davis,Software Engineering,91.00,3.76

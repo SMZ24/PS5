@@ -1,0 +1,35 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+GradeSystem
+a.out
+
+# IDE and Editor files
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+*_backup.csv
+
+# Build directories
+build/
+bin/
+obj/
+
+# Temporary files
+*.tmp
+*.temp
+
+# CSV backup files (keep original)
+*_old.csv
+
+
