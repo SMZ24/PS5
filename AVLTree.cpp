@@ -406,7 +406,7 @@ void AVLTree::loadFromFile(const std::string &filename) {
 
     int student_ID;
     std::string name, course;
-    float grade, gpa;
+    float grade;
 
     try {
       // Parse student_ID
@@ -423,9 +423,8 @@ void AVLTree::loadFromFile(const std::string &filename) {
       std::getline(ss, token, ',');
       grade = std::stof(token);
 
-      // Parse GPA (we recalculate it, but read it for compatibility)
+      // Parse GPA (skip it, we recalculate automatically with American system)
       std::getline(ss, token, ',');
-      gpa = std::stof(token);
 
       // Insert - will automatically add course if student exists
       insert(student_ID, name, course, grade);

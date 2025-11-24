@@ -18,8 +18,23 @@ AVLNode::AVLNode(int id, const std::string &n, const std::string &c, float g)
   calculateGPA();
 }
 
-// Calculate GPA from all courses (simple average of grades converted to 4.0
-// scale)
+// Helper function to convert numeric grade to GPA using American letter grade
+// system
+float gradeToGPA(float grade) {
+  if (grade >= 90.0)
+    return 4.0; // A
+  else if (grade >= 80.0)
+    return 3.0; // B
+  else if (grade >= 70.0)
+    return 2.0; // C
+  else if (grade >= 60.0)
+    return 1.0; // D
+  else
+    return 0.0; // F
+}
+
+// Calculate GPA from all courses (average of letter grade GPAs using American
+// grading system)
 void AVLNode::calculateGPA() {
   if (courses.empty()) {
     GPA = 0.0;
@@ -28,8 +43,8 @@ void AVLNode::calculateGPA() {
 
   float totalGradePoints = 0.0;
   for (const auto &course : courses) {
-    // Convert grade (0-100) to GPA scale (0-4.0)
-    float courseGPA = (course.grade / 100.0) * 4.0;
+    // Convert grade (0-100) to GPA using letter grade system
+    float courseGPA = gradeToGPA(course.grade);
     totalGradePoints += courseGPA;
   }
 
